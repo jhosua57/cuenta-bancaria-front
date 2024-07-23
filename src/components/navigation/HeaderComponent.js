@@ -5,10 +5,13 @@ export const HeaderComponent = () => {
     <div>
         <header>
             <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                <div><a href="/" className="navbar-brand">Cuenta Bancaria</a></div>
+                <div className="container-fluid"><a href="/" className="navbar-brand ">Cuenta Bancaria</a></div>
             </nav>
         </header>
     </div>
+
+    
+
   )
 }
 

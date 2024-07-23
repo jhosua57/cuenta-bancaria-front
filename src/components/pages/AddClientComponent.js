@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ClientService from "../services/ClientService";
+import ClientService from "../../services/ClientService";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 
@@ -63,13 +63,16 @@ export const AddClientComponent = () => {
       <div className="container">
         <div className="row">
           <div className="card col-md-6 offset-md-3 offset-md-3">
-            <h2 className="text-center"> {title()} </h2>
+            <h2 className="text-center"> 
+              <br />
+              {title()} 
+              <hr />
+            </h2>
             <div className="card-body">
               <form>
                 <div className="form-group mb-2">
                   <label className="form-label">Nombre: </label>
                   <input
-                    placeholder="Nombre"
                     name="name"
                     className="form-control"
                     value={name}
@@ -79,7 +82,6 @@ export const AddClientComponent = () => {
                 <div className="form-group">
                   <label className="form-label">Apellido Paterno: </label>
                   <input
-                    placeholder="Apellido Paterno"
                     name="paternal"
                     className="form-control"
                     value={paternal}
@@ -89,7 +91,6 @@ export const AddClientComponent = () => {
                 <div className="form-group">
                   <label className="form-label">Apellido Materno: </label>
                   <input
-                    placeholder="Apellido Materno"
                     name="maternal"
                     className="form-control"
                     value={maternal}
@@ -114,7 +115,6 @@ export const AddClientComponent = () => {
                 <div className="form-group">
                   <label className="form-label">Numero de Documento: </label>
                   <input
-                    placeholder="Numero de Documento"
                     name="documentidentity"
                     className="form-control"
                     value={documentidentity}
@@ -125,7 +125,6 @@ export const AddClientComponent = () => {
                   <label className="form-label">Fecha de Nacimiento: </label>
                   <input
                     type="date"
-                    placeholder="Fecha de Nacimiento"
                     name="birthdate"
                     className="form-control"
                     value={birthdate}
@@ -147,6 +146,7 @@ export const AddClientComponent = () => {
                   </select>
                   
                 </div>
+                <hr />
                 <button className="btn btn-success" onClick={(e) => saveOrUpdateClient(e)}>Registrar</button>
                 &nbsp;&nbsp;
                 <Link to="/clientes" className="btn btn-danger">Cancelar</Link>
